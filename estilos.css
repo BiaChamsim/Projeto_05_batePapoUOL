@@ -1,0 +1,43 @@
+.topo{
+    width: 375px;
+    height: 80px;
+    background-color: lightsalmon;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+.logo{
+    width: 75px;
+    height: 53px;
+    margin-left: 22px;
+} 
+
+.vetor{
+    width: 42px ;
+    height: 31px;  
+    margin-right: 24px;  
+}
+
+.container{
+    width: 375px;
+    height: 587px;
+    background-color: #E5E5E5;
+    overflow-y: scroll;
+}
+
+.bottom{
+    width: 375px;
+    height: 80px;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.vetorBottom{
+    width: 26px;
+    height: 26px;
+    margin-right: 27px;
+}
