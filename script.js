@@ -45,7 +45,7 @@ function carregarMensagens(){
             if (mensagens[i].type === "status"){
                 conteudo.innerHTML += `
                 <div class="status">
-                <span>${mensagens[i].time}</span>
+                <span> (${mensagens[i].time}) </span>
                 <span>${mensagens[i].from}</span> 
                 <span>${mensagens[i].text}</span>         
                 </div>
@@ -53,16 +53,16 @@ function carregarMensagens(){
             }else if(mensagens[i].type === "message"){
                 conteudo.innerHTML += `
                 <div class="message">
-                    <span>${mensagens[i].time}</span>
+                    <span>(${mensagens[i].time})</span>
                     <span>${mensagens[i].from} </span> 
-                    <span> para ${mensagens[i].to} : </span>
+                    <span> para ${mensagens[i].to}:</span>
                     <span>${mensagens[i].text}</span>         
                 </div>
                 `
             }else if (mensagens[i].to === nomeUsuario){
                 conteudo.innerHTML += `
                 <div class="private">
-                    <span>${mensagens[i].time}</span>
+                    <span>(${mensagens[i].time})</span>
                     <span>${mensagens[i].from} </span> 
                     <span> reservadamente para ${mensagens[i].to} : </span>
                     <span>${mensagens[i].text}</span>         
@@ -70,9 +70,9 @@ function carregarMensagens(){
                 `
             }
         }
-        //let lastMessage = conteudo.children[mensagens.length-1];
-
-        console.log(conteudo.children[mensagens.length -1])
+        
+        let lastMessage = conteudo.querySelector(":nth-child(98)");
+        lastMessage.scrollIntoView()
     })
 }
 
